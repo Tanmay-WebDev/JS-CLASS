@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes In JS</title>
+</head>
+<body>
+    <h1>Classes in JS</h1>
+    
+    <p id="coder1"></p>
+    <p id="coder2"></p>
+
+    <script>
+        class Coder {
+            constructor(name, year, expert) {
+                this.name = name;
+                this.year = year;
+                this.expert = expert;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        let coder1 = new Coder("Tanmay", 2012, "C++");
+        document.getElementById("coder1").innerHTML = 
+            "My name is " + coder1.name +
+            ", I am " + coder1.age() + " years old, " + 
+            "I am expert in " + coder1.expert;
+
+        let coder2 = new Coder("Stuti", 2012, "C#");
+        document.getElementById("coder2").innerHTML = 
+            "My name is " + coder2.name + 
+            ", I am " + coder2.age() + " years old, " + 
+            "I am expert in " + coder2.expert;
+    </script>
+</body>
+</html>
